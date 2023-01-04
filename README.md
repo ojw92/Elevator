@@ -8,7 +8,7 @@ Points to consider:
  - time for elevator to move from one floor to the next
  - time from starting floor to next floor as it accelerates & 2nd to last floor to last floor as it deccelerates
  - for simplicity of problem, assume electrical energy spent & durability of equipment are negligible
- - define "window of usage" (WoU or simply window) as the duration between the start of waiting for the elevator (pressing the button at the initial floor) and end of the elevator travel (opening of the elevator door for exit)
+ - define "window of usage" (WoU or simply 'window') as the duration between the start of waiting for the elevator (pressing the button at the initial floor) and end of the elevator travel (opening of the elevator door for exit)
 
 Problem statement:
 Minimize wait time & travel time for users in the same "window of usage"
@@ -19,9 +19,21 @@ Minimize wait time & travel time for users in the same "window of usage"
 
 constraints & constants:
 
-Time it takes for a door to accommodate a stop
- - assume the elevator can efficiently deccelerate within 1 floor from its destination, but not enough to ignore the time cost of stopping for stop in between transport
- - given x_0 as departure point, x_f as destination, and x_(f-k) as every floor in between travel, where k is an integer that is 0 < k < f. Assume it takes 1 second to travel in between floors that are not adjacent to x_0 & x_f, i.e. x_(f-k), and 1.5 seconds to travel into the destination floor or out of the departure point from its adjacent floor, i.e. x_0 -> x_1 or x_(f-1) -> x_f
+Time it takes for a door to accommodate a stop (values as close to measured values as possible)
+ - given x_0 as departure point, x_f as destination, and x_(f-k) as every floor in between travel, where k is an integer that is 0 < k < f
+ - assume it takes 1.5 second to travel in between floors that are not adjacent to x_0 & x_f, i.e. x_(f-k)
+ - assume it takes 4.5 seconds to travel into the destination floor to zero velocity or travel out of the departure point from zero velocity to its adjacent floor, i.e. x_0 -> x_1 or x_(f-1) -> x_f, and another 2 seconds for the 
+
+
+stages of elevator travel:
+1. press the button from starting floor (x_0)
+2. wait for the elevator to travel along intermediate floors (x_(f-k))
+3. wait for the elevator to travel into starting floor and deccelerate to a full stop 
+4. wait for the door to open, enter, press the button to the destination floor, and wait for the door to close automatically (assuming the 'close door' button does not work)
+5. wait for the elevator to travel along intermediate floors (x_(f-k))
+6. wait for the elevator to travel into destination floor and deccelerate to a full stop
+7. wait for the door to open and exit the elevator (x_f)
+
 
 
 
