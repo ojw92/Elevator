@@ -22,7 +22,7 @@ constraints & constants:
 Time it takes for a door to accommodate a stop (values as close to measured values as possible)
  - given x_0 as departure point, x_f as destination, and x_(f-k) as every floor in between travel, where k is an integer that is 0 < k < f
  - assume it takes 1.5 second to travel in between floors that are not adjacent to x_0 & x_f, i.e. x_(f-k)
- - assume it takes 4.5 seconds to travel into the destination floor to zero velocity or travel out of the departure point from zero velocity to its adjacent floor, i.e. x_0 -> x_1 or x_(f-1) -> x_f, and another 2 seconds for the 
+ - assume it takes 4.5 seconds to travel into the destination floor to zero velocity or travel out of the departure point from zero velocity to its adjacent floor, i.e. x_0 -> x_1 or x_(f-1) -> x_f, and another 4 seconds for the door to open
 
 
 stages of elevator travel:
