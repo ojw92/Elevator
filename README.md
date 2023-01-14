@@ -18,7 +18,7 @@ Points to consider:
  - define "window of usage" (WoU or simply 'window') as the duration between the start of waiting for the elevator (pressing the button at the initial floor) and end of the elevator travel (opening of the elevator door for exit)
 
 
-constraints & constants:
+Constraints & constants:
 Time it takes for a door to accommodate a stop (values as close to measured values as possible)
  - given x_0 as departure point, x_f as destination, and x_(f-k) as every floor in between travel, where k is an integer that is 0 < k < f
  - assume it takes 1.5 seconds to travel in between floors that are not adjacent to x_0 & x_f, i.e. x_(f-k)
@@ -27,7 +27,7 @@ Time it takes for a door to accommodate a stop (values as close to measured valu
  - 
 
 
-stages of elevator travel:
+Stages of elevator travel:
 1. press the button from starting floor (x_0)
 2. wait for the elevator to travel along intermediate floors (x_(f-k))
 3. wait for the elevator to travel into starting floor and deccelerate to a full stop 
@@ -35,6 +35,7 @@ stages of elevator travel:
 5. wait for the elevator to travel along intermediate floors (x_(f-k))
 6. wait for the elevator to travel into destination floor and deccelerate to a full stop
 7. wait for the door to open and exit the elevator (x_f)
+
 
 
 
