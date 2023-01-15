@@ -3,7 +3,7 @@ elevator project
 
 This project was motivated by my personal unsatisfactory experience with the elevator at my apartment. I will attempt to develop a more efficient algorithm using the parameters that I consider to be essential in optimizing wait time & travel time for the user(s) involved.
 
-Problem statement:
+Problem Statement:
 Minimize wait time & travel time for users in the same "window of usage"
  1. what is the maximum difference in floors between 2 ppl for an elevator to choose to pick up the person on the higher floor, then the lower floor, and still be efficient?
  2. (For 2 elevators) What is the minimum difference in floors between 2 ppl for elevator 1 to choose person 1 over person 2 so elevator 2 can stop at person 2?
@@ -24,6 +24,7 @@ Time it takes for a door to accommodate a stop (values as close to measured valu
  - assume it takes 1.5 seconds to travel in between floors that are not adjacent to x_0 & x_f, i.e. x_(f-k)
  - assume it takes 3 seconds to travel into the destination floor to zero velocity (x_0 -> x_1) and 4.5 seconds to travel out of the departure point from zero velocity to its adjacent floor (x_(f-1) -> x_f)
  - assume it takes the door 4.5 seconds to fully open and 4 seconds to fully close, and that there is a 6.5-second duration in between when the door remains open
+ - assume that once a person enters the elevator at the departure point, he/she does not hold the door open, simply presses the button for the destination floor and waits until he/she arrives
  - 
 
 
