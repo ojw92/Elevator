@@ -1,6 +1,7 @@
 # Elevator
 elevator project
 
+
 This project was motivated by my personal unsatisfactory experience with the elevator at my apartment. I will attempt to develop a more efficient algorithm using the parameters that I consider to be essential in optimizing wait time & travel time for the user(s) involved.
 
 
